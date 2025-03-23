@@ -22,7 +22,7 @@ The following hyperparameters were used during training:
 - Training loss: 0.052300
 - Validation loss: 0.006372
 - BLEU Score on Validation Set: 0.9964783232500736
-- 
+
 # Dependencies Version
 
 ## Python Version
