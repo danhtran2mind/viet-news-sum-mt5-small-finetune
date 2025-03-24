@@ -1,13 +1,15 @@
-# Training Notbook
+# viet-news-sum-mt5-small-finetune
+
+## Training Notbook
   Available at: https://github.com/danhtran2mind/viet-news-sum-mt5-small-finetune/blob/main/notebooks/viet-news-sum-mt5-small-finetune.ipynb
 
-# Dataset
+## Dataset
   Available at: https://huggingface.co/datasets/OpenHust/vietnamese-summarization
   
-# Base Model
+## Base Model
   Available at: https://huggingface.co/google/mt5-small
   
-# Training Hyperparameters
+## Training Hyperparameters
 
 The following hyperparameters were used during training:
 - learning_rate: 3e-4
@@ -18,17 +20,17 @@ The following hyperparameters were used during training:
 - optimizer: Adam with betas=(0.9,0.999) and epsilon=1e-08
 - num_epochs: 50
 
-# Metric
+## Metric
 - Training loss: 0.052300
 - Validation loss: 0.006372
 - BLEU Score on Validation Set: 0.9964783232500736
 
-# Dependencies Version
+## Dependencies Version
 
-## Python Version
+### Python Version
   Version: 3.10.12
   
-## Libraries Version
+### Libraries Version
 ```python
 pandas==2.2.3
 numpy==1.26.4
@@ -40,27 +42,27 @@ tqdm==4.67.1
 transformers==4.47.0
 ```
 
-# How to Use
+## How to Use
 
-## Installation & Setup
+### Installation & Setup
 ```python
 pip install -r requirements.txt
 ```
-## Import Libraries
+### Import Libraries
 ```python
 import torch
 from transformers import T5ForConditionalGeneration, T5Tokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer
 from transformers import Seq2SeqTrainingArguments, Seq2SeqTrainer
 ```
 
-## Load the Model
+### Load the Model
 ```python
 model_name = "danhtran2mind/viet-news-sum-mt5-small-finetune"
 tokenizer = T5Tokenizer.from_pretrained(model_name)  
 model = T5ForConditionalGeneration.from_pretrained(model_name)
 ```
 
-## Inference Step
+### Inference Step
 ```python
 def preprocess_input(text):
     inputs = tokenizer(text, max_length=512, truncation=True, padding="max_length", return_tensors="pt")
