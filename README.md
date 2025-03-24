@@ -23,7 +23,7 @@ The following hyperparameters were used during training:
 ## Metric
 - Training loss: 0.052300
 - Validation loss: 0.006372
-- BLEU Score on Validation Set: 0.9964783232500736
+- BLEU Score in Validation Set: 0.9964783232500736
 
 ## Dependencies Version
 
@@ -106,7 +106,7 @@ input_text = input_text.replace("\n", "")
 summary = generate_summary(input_text)
 print(f"Summary: {summary}")
 ```
-# Example output
+## Example output
 ```python
 # Summary: Đến khoa gây mê hồi sức Bệnh viện Đức Giang , Hà Nội vừa tiếp nhận một nữ thai phụ mang thai 26 tuần bị viêm phổi , chấn thương sọ não nghiêm trọng với xuất huyết dưới nhện .
 ```
